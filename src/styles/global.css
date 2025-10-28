@@ -1,0 +1,400 @@
+:root {
+    --max-w: 1440px;
+    --bg: #F8FAFC;
+    --card: #ffffff;
+    --muted: #6b7280;
+    --primary: #4f46e5;
+    --dark: #1e1e1e;
+    --light: #ffffff;
+    --shadow: rgba(0, 0, 0, 0.08);
+}
+
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Inter, ui-sans-serif, system-ui, Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: var(--bg);
+    color: #0f172a
+}
+
+.max-width {
+    max-width: var(--max-w);
+    margin: 0 auto;
+    padding: 0 16px
+}
+
+.site-header {
+    background: white;
+    box-shadow: 0 1px 6px rgba(2, 6, 23, 0.06);
+    position: sticky;
+    top: 0;
+    z-index: 40
+}
+
+.header-inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 12px 16px
+}
+
+.logo {
+    font-weight: 700;
+    color: #0b74ff;
+    text-decoration: none
+}
+
+.nav-links {
+    display: flex;
+    gap: 12px;
+    align-items: center
+}
+
+.nav-links a {
+    color: #111;
+    text-decoration: none
+}
+
+.logout-btn,
+.btn {
+    background: transparent;
+    border: 1px solid #ddd;
+    padding: 8px 12px;
+    border-radius: 8px;
+    cursor: pointer
+}
+
+.btn.primary {
+    background: var(--primary);
+    color: white;
+    border-color: transparent
+}
+
+.cta-signup {
+    background: var(--primary);
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    text-decoration: none
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer
+}
+
+.hamburger span {
+    display: block;
+    width: 20px;
+    height: 2px;
+    background: #111;
+    margin: 4px 0
+}
+
+/* landing */
+.landing-container {
+    overflow: hidden;
+    background: #f8f9ff;
+    font-family: "Inter", sans-serif;
+}
+
+.hero-section {
+    position: relative;
+    text-align: center;
+    padding: 120px 0 120px;
+    background: var(--primary);
+    color: var(--light);
+}
+
+.hero-content h1 {
+    font-size: 42px;
+    margin: 0
+}
+
+.hero-buttons {
+    margin-top: 18px;
+    display: flex;
+    gap: 12px;
+    justify-content: center
+}
+
+.btn-outline {
+    border: 1px solid #0b74ff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    color: #0b74ff;
+    text-decoration: none
+}
+
+.btn-filled {
+    background: #0b74ff;
+    color: #fff;
+    padding: 10px 18px;
+    border-radius: 8px;
+    text-decoration: none
+}
+
+.hero-circle {
+    position: absolute;
+    top: 30%;
+    right: 15%;
+    width: 120px;
+    height: 120px;
+    background: rgba(255, 255, 255, 0.18);
+    border-radius: 50%;
+    filter: blur(2px);
+}
+
+/* features */
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 16px;
+    padding: 40px 16px
+}
+
+.feature-card {
+    background: var(--card);
+    padding: 18px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(2, 6, 23, 0.06)
+}
+
+/* page layout */
+.page {
+    padding: 24px
+}
+
+.card {
+    background: var(--card);
+    padding: 14px;
+    border-radius: 10px;
+    box-shadow: 0 6px 18px rgba(2, 6, 23, 0.06)
+}
+
+.muted {
+    color: var(--muted)
+}
+
+.stats-grid {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap
+}
+
+.stat {
+    flex: 1;
+    min-width: 160px
+}
+
+/* tickets */
+.ticket-card {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+    flex-wrap: wrap
+}
+
+.ticket-card .left {
+    flex: 1;
+    min-width: 0
+}
+
+.ticket-card .right {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    flex-shrink: 0;
+    align-items: flex-end
+}
+
+.title-row {
+    display: flex;
+    gap: 8px;
+    align-items: center
+}
+
+.status {
+    padding: 4px 8px;
+    border-radius: 999px;
+    font-size: 12px;
+    white-space: nowrap
+}
+
+/* modal */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.35);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 16px
+}
+
+.modal-inner {
+    width: min(760px, 100%)
+}
+
+/* auth */
+.auth-container {
+    max-width: 720px;
+    margin: 40px auto;
+    padding: 18px
+}
+
+.field {
+    margin-bottom: 12px
+}
+
+input,
+select,
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #e6e6e6;
+    border-radius: 8px
+}
+
+.error {
+    color: #e53e3e;
+    font-size: 13px;
+    margin-top: 6px
+}
+
+
+/* auth styles begins */
+/* auth.css */
+
+.auth-container {
+    max-width: 400px;
+    margin: 6rem auto;
+    padding: 3rem 2.5rem;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.auth-container:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.auth-container h2 {
+    font-size: 1.9rem;
+    font-weight: 700;
+    color: #111827;
+    margin-bottom: 1.8rem;
+    letter-spacing: -0.5px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.4rem;
+}
+
+.field {
+    position: relative;
+}
+
+.field input {
+    width: 100%;
+    padding: 0.9rem 1rem;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    background-color: #f9fafb;
+    font-size: 0.95rem;
+    transition: all 0.3s ease;
+}
+
+.field input:focus {
+    border-color: #3b82f6;
+    background-color: #fff;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
+    outline: none;
+}
+
+.error {
+    color: #ef4444;
+    font-size: 0.85rem;
+    margin-top: 0.3rem;
+    text-align: left;
+}
+
+.btn.primary {
+    background: #3b82f6;
+    color: white;
+    padding: 0.9rem;
+    font-size: 1rem;
+    font-weight: 600;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.btn.primary:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+}
+
+p {
+    margin-top: 1.2rem;
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+p a {
+    color: #3b82f6;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+/* Optional: responsive adjustments */
+@media (max-width: 480px) {
+    .auth-container {
+        margin: 3rem 1rem;
+        padding: 2rem 1.5rem;
+    }
+}
+
+
+
+/* end auth styles */
+
+/* responsive */
+@media (max-width:800px) {
+    .nav-links {
+        display: none
+    }
+
+    .hamburger {
+        display: block
+    }
+
+    .nav-links.open {
+        display: flex;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 56px;
+        background: white;
+        flex-direction: column;
+        padding: 12px
+    }
+
+    .hero-content h1 {
+        font-size: 32px
+    }
+}
