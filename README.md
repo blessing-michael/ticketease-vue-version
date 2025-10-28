@@ -21,7 +21,10 @@ Tech Stack <a name="tech-stack"></a>
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 🚀 Live Demo <a name="live-demo"></a>
 
-👉 https://ticket-ease-vue.vercel.app/
+👉 react version
+- https://vermillion-gelato-45f7ef.netlify.app/
+👉 vue version
+- https://calm-begonia-1a3b8e.netlify.app/
 
 💻 Getting Started <a name="getting-started"></a>
 Prerequisites
@@ -38,7 +41,7 @@ Setup
 
 Clone the repository to your local machine:
 
-git clone git@github.com:blessing-michael/TicketEase.git
+git clone git@github.com:blessing-michael/ticketease-vue-version.git
 cd ticketapp-vue
 
 
